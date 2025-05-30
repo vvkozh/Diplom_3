@@ -56,8 +56,7 @@ class MainPage(BasePage):
 
     @allure.step('Подождать загрузки карточки ингредиента')
     def wait_load_card_ingredient(self):
-        self.wait_for_element(MainPageLocator.HEAD_INGREDIENT_DETAIL)
-        self.wait_hide_element(MainPageLocator.OVERLAY)
+        return self.wait_for_element(MainPageLocator.HEAD_INGREDIENT_DETAIL)
 
     @allure.step('Подождать загрузки номера заказа')
     def wait_load_order_card(self):

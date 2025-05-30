@@ -30,7 +30,7 @@ class TestCheckBasicFunction:
         main_page.going_main_page()
         main_page.scroll_to_element_page(locator[1])
         main_page.click_ingredient(locator[1])
-        main_page.wait_load_card_ingredient()
+        assert main_page.wait_load_card_ingredient()
         assert Curls.INGREDIENT_LINK[category][locator[0]] in main_page.get_url_page()
 
     @pytest.mark.parametrize('category', ['buns', 'souses','toppings'])
